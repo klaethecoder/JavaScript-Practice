@@ -48,6 +48,3 @@ for (let i = 0; i < links.length; i++) {
         console.log(`There are ${div.querySelectorAll('.box').length} boxes on the page`)
     })
 }
-
-
-// createBoxes(100)
