@@ -2,18 +2,21 @@
 
 // Function Declaration
 function palindrome(word) {
-    return [...word.toLowerCase()].reverse().join('') == word.toLowerCase() ? true : false
+    return [...word.toLowerCase()].reverse().join('') == word.toLowerCase();
 }
 // Function Expression
 
-const palindrome2 = (word) => [...word.toLowerCase()].reverse().join("") == word.toLowerCase() ? true : false
+const palindrome2 = (word) => [...word.toLowerCase()].reverse().join("") == word.toLowerCase();
 
 console.log(palindrome("RaceCar"))
-console.log('function palindrome(word){return [...word.toLowerCase()].reverse().join("") == word.toLowerCase() ? true : false}'.length)
+console.log('function palindrome(word){return [...word.toLowerCase()].reverse().join("") == word.toLowerCase();}'.length)
 
 console.log(palindrome2("LeVel"))
-console.log('const palindrome2 = (word) => [...word.toLowerCase()].reverse().join("") == word.toLowerCase() ? true : false'.length)
+console.log('const palindrome2 = (word) => [...word.toLowerCase()].reverse().join("") == word.toLowerCase();'.length)
 
 
 // Free Code Camp Version of Palindrome Solution
-function palindrome(str) { return [...str.toLowerCase().replace(/[_*-\\.,\\\\\\(\\) ]/g, \"\")].reverse().join(\"\") == str.toLowerCase().replace(/[_*-\\.,\\\\\\(\\) ]/g,\"\") ? true : false;
+function palindrome(str) {
+    return str.replace(/[\W_]/g, '').toLowerCase() ===
+        str.replace(/[\W_]/g, '').toLowerCase().split('').reverse().join('');
+}
